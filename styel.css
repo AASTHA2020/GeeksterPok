@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander&family=Playpen+Sans&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Grandstander', cursive;
+font-family: 'Playpen Sans', cursive;
+}
+
+
+body {
+  background-image: url(pik.png);
+  
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+ 
+  }
+  h1 {
+    margin-top: 2px;
+    color: #dfe216;
+    padding-bottom: 0rem;
+    /* grid-column: 1;
+    grid-row: 1; */
+    z-index: 2;
+    font-family: 'Teko', sans-serif;
+    font-size: 6rem;
+    text-transform: uppercase;
+    animation: glow 2s ease-in-out infinite alternate;
+    text-align: center;
+  }
+  
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 30px #37a92d;
+    }
+    to {
+      text-shadow: 0 0 40px #39c134, 0 0 30px #4dc761;
+    }
+  }
+
+
+.gif {
+  width: 120px; /* Set width of the GIF */
+  height: 120px; /* Maintain aspect ratio */
+  margin-left: 2px; /* Adjust margin between heading and GIF */
+}
+.content {
+  position: relative;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+
+
+
+
+.filter-button {
+  padding: 10px 20px;
+  background-color: #6e018f;
+  color: rgb(252, 251, 251);
+  font-size: medium;
+  border-color: #650372;
+  border-radius: 20px; /* Add border curve */
+  margin: 5px; /* Adjust margin between buttons */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.filter-button:hover {
+  transform: translateY(-6px); /* Apply hover effect on the Y-axis */
+  box-shadow: 0 0 20px rgba(68, 19, 78, 0.945); /* Add shadow on hover */
+}
+
+
+
+.card{
+    display: flex;
+    height:250px;
+    /* width: 100px; */
+    position: relative;-
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+ 
+}
+.card-back{
+    transform: rotateY(180deg);
+}
+
+#pokemon-card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:30px;
+    padding:30px;
+
+}
+.id{
+    background-color: white;
+    width: 100%;
+    text-align: center;
+}
+.name{
+    font-family: 'Playpen Sans', cursive;
+    font-size: 24px;
+    font-weight: 700;
+}
+.card { 
+    /* background-color: transparent;  */
+    width: 200px; 
+    height: 250px; 
+    perspective: 1000px; 
+} 
+.card-inner { 
+    position: relative; 
+    width: 100%; 
+    height: 100%; 
+    text-align: center; 
+    transition: transform 0.6s; 
+    transform-style: preserve-3d;
+     padding: 20px 0px;
+     border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+} 
+.card:hover .card-inner { 
+    transform: rotateY(180deg); 
+} 
+.card-front, .card-back { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    backface-visibility: hidden; 
+}
+.ability{
+    font-weight: 700;
+
+}
+.type{
+    background-color: white;
+    padding:3px 5px;
+    border-radius: 5px;
+    margin:8px;
+}
+button{
+    padding:10px 20px;
+    background-color:#28390f;
+    /* border: none; */
+    color:white;
+    border-color: #28390f;
+}
+select,input {
+    padding: 10px 20px;
+}
